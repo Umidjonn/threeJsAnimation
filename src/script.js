@@ -43,9 +43,11 @@ const tick = () =>
     
 
     //Update objects
-    // mesh.rotation.y = elapsedTime 
-    mesh.position.y = Math.sin(elapsedTime)
-    mesh.position.x = Math.cos(elapsedTime)
+    // camera.rotation.y = Math.sin(elapsedTime) 
+    camera.position.y = Math.sin(elapsedTime)
+    camera.position.x = Math.cos(elapsedTime)
+    //360 C Camera
+    camera.lookAt(mesh.position)
 
     //Render
     renderer.render(scene, camera)
